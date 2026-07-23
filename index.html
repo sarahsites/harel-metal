@@ -63,6 +63,10 @@
   .btn svg{width:1.05em;height:1.05em;fill:currentColor}
   .btn-primary{background:var(--brand);color:#fff}
   .btn-primary:hover{background:var(--brand-d)}
+  .btn-primary svg{transition:transform .25s ease}
+  .btn-primary:hover svg{animation:arrowNudge .7s ease-in-out infinite}
+  @keyframes arrowNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+  @media (prefers-reduced-motion:reduce){.btn-primary:hover svg{animation:none;transform:translateX(4px)}}
   .btn-wa{background:var(--wa);color:#fff}
   .btn-wa:hover{background:#1eb457}
   .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
